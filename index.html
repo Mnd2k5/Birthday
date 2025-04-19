@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Maze Birthday Surprise</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="bgIcons"></div>  
+    <div id="introScreen" class="intro-screen">
+        <div class="intro-content">
+            <p>
+                Đây là trò chơi vui nho nhỏ cho ngày đặc biệt ngày hôm nay nhé hehe ! <br>
+                Hãy cố gắng thu thập hết phần quà trong trò chơi để tìm ra hết manh mối cho món quà
+                bất ngờ nhé. <br> 
+                Có món quà bất ngờ đang chờ đợi phía trước đó nhưng mà hãy thu thập những thông tin để tìm được món quà nhé. 
+                Chắc dễ thôi nhưng mà cố gắng đi từ từ để nghe nhạc nữa nhé. <br> 
+                Hãy để dành màu xanh cho cuối cùng nhé hehe ^^. 
+            </p>
+
+            <button id="startBtn">🎶 Click to Start 🎶</button>
+        </div>
+    </div>
+    <audio id="bgMusic" src="assets/background.mp3" loop></audio>
+    <div class="container">
+        <h2>🎂 Happy Birthday Bubabi! 🎈</h2>
+        <div id="maze"></div>
+        <div id="message"></div>
+        <div id="videoContainer" style="display:none;">
+            <video controls width="400">
+                <source src="assets/birthday.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+
+    <script src="maze.js"></script>
+    
+</body>
+</html>

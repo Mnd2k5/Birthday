@@ -1,0 +1,118 @@
+body {
+    background-color: #f3f0ff;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+}
+
+#maze {
+    display: grid;
+    grid-template-columns: repeat(8, 40px);
+    grid-template-rows: repeat(8, 40px);
+    gap: 2px;
+    justify-content: center;
+    margin: 10px auto;
+}
+
+.cell {
+    border: 1px solid #aaa;
+    background-color: #fff;
+}
+
+.wall {
+    background-color: #4e4e4e;
+}
+
+.player {
+    background-color: #ff9dee;
+}
+
+.gift {
+    background-color: gold;
+}
+
+.goal {
+    background-color: #4aff91;
+}
+
+#message {
+    margin-top: 20px;
+    color: #555;
+    font-size: 18px;
+    height: 40px;
+}
+
+#videoContainer {
+    margin-top: 20px;
+}
+/* --- Full‑screen intro overlay --- */
+.intro-screen {
+    position: fixed;     /* covers entire viewport */
+    inset: 0;            /* shorthand for top:0 right:0 bottom:0 left:0 */
+    background: rgba(243, 240, 255, 0.95);  /* soft backdrop */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;       /* ensures it floats above everything */
+    text-align: center;
+    padding: 20px;
+}
+
+.intro-content {
+    max-width: 420px;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+#startBtn {
+    margin-top: 18px;
+    padding: 10px 18px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.floating-photo {
+    position: fixed;          /* covers viewport */
+    width: 120px;             /* tweak as you like */
+    pointer-events: none;
+    z-index: 9999;
+    animation: photoPop 8s ease-in-out forwards;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+@keyframes photoPop {
+    0%   { opacity: 0; transform: scale(0.4) rotate(0deg); }
+    10%  { opacity: 1; transform: scale(1)   rotate(6deg); }
+    90%  { opacity: 1; }
+    100% { opacity: 0; transform: scale(0.4) rotate(25deg); }
+}
+/* --- Floating birthday icons --- */
+#bgIcons {
+    position: fixed;
+    inset: 0;                 /* full viewport */
+    overflow: hidden;
+    pointer-events: none;     /* let clicks pass through */
+    z-index: 0;               /* behind everything */
+}
+
+/* every icon */
+.bg-icon {
+    position: absolute;
+    font-size: 26px;          /* size of the emoji */
+    animation: float 14s linear infinite;
+    opacity: 0.9;
+}
+
+/* slow upward drift */
+@keyframes float {
+    0%   { transform: translateY(0);    }
+    100% { transform: translateY(-120vh);}
+}
